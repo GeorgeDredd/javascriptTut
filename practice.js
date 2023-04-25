@@ -1,0 +1,223 @@
+// // DATA TYPES
+// alert("Hello World");
+// typeof()
+
+
+// // VARIABLES
+// var myName = "George";
+// var yourName = prompt("What is your name?")
+// alert("Hi, " + yourName + "! " + "I'm " + myName + ", and it's really nice to meet you");
+// ;
+
+
+// function test() {
+//     var a = "3";
+//     var b = "8";
+
+//     var c = a;
+//     a = b;
+//     b = c;  
+
+//     console.log(a)
+//     console.log(b)
+// }
+
+// test()
+
+
+
+// // NAMING AND NAMING CONVENTIONS
+// var myvar = "abc";
+// var my123 = 123;
+// var myname = "George";
+// var my_name = "George"
+// var userScoreFinal = 12;
+
+
+
+// // STRING CONCATENATION
+// var message = "Hello";
+// var user = prompt("Enter your name: ");
+
+// alert(message + " " + user);
+
+
+
+// // STRING LENGTH
+// var blogPost = prompt("Enter your post: ");
+
+// // alert("You have written " + blogPost.length + " characters. " + 
+// //       "You have " + (140-blogPost.length) + " characters left");
+
+// var blogPostCount = blogPost.length;
+// alert("You have written " + blogPostCount + " characters. " + 
+//       "You have " + (140 - blogPostCount) + " characters left");
+
+
+
+
+// // SLICING AND EXTRACTING STRINGS
+// var name = "George";
+// name.slice(5,6)
+
+// var blogPost = prompt("Enter your post (Maximum of 20 characters): ");
+// var newBlogPost = blogPost.slice(0,20);
+// var blogPostCount = blogPost.length;
+
+// alert(newBlogPost);
+// alert("You have written " + blogPostCount + " characters. " + 
+//       "You have " + (20 - blogPostCount) + " characters left");
+
+
+
+// // MORE STRING METHODS
+// var userName = prompt("Enter your username: ");
+// var firstChar =  userName.slice(0,1);
+// var upperCaseFirstChar =  firstChar.toUpperCase();
+// var otherChar = userName.slice(1,userName.length);
+// var lowerCaseOtherChar = otherChar.toLowerCase();
+// var capitalisedName = upperCaseFirstChar + lowerCaseOtherChar;
+
+// // alert(userName.slice(1, (userName.length-1))); 
+// alert("Hello, " + capitalisedName);
+
+
+
+// // ARITHMETIC AND MODULO OPERATOR
+// var dogAge = prompt("Enter age of dog: ");
+// var humanAge = (dogAge-2) * 4 + 21;
+
+// alert("The dog's age is " + humanAge + " in human years");
+
+
+
+
+// // INCREMENT AND DECREMENT EXPRESSIONS
+// var x = 5;
+// var y = 3;
+
+// x = x + 1;
+// x++;
+// x = x - 1;
+// x--
+// x += y;
+// x -= y;
+// x *= y;
+// x /= y;
+// x %= y;
+
+
+
+// // FUNCTIONS
+// // A function that tells my robot to buy food
+// function getFood() {
+//     console.log("leaveHouse");
+//     console.log("moveRight");
+//     console.log("moveUp");
+//     console.log("moveUp");
+//     console.log("moveUp");
+//     console.log("moveRight");
+//     console.log("buyFood");
+//     console.log("moveLeft");
+//     console.log("moveDown");
+//     console.log("moveDown");
+//     console.log("moveDown");
+//     console.log("moveLeft");
+//     console.log("enterHouse");
+// }
+
+// getFood();
+
+
+// // ANOTHER EXAMPLE - DRY PRINCIPLE
+// function getFood() {
+//     console.log("leaveHouse");
+//     console.log("moveRight");
+//     moveUp();
+//     console.log("moveRight");
+//     console.log("buyFood");
+//     console.log("moveLeft");
+//     moveDown();
+//     console.log("moveLeft");
+//     console.log("enterHouse");
+// }
+
+
+// function moveUp() {
+//     console.log("moveUp");
+//     console.log("moveUp");
+//     console.log("moveUp");
+// }
+
+
+// function moveDown() {
+//     console.log("moveDown");
+//     console.log("moveDown");
+//     console.log("moveDown");
+// }
+
+// getFood();
+
+
+
+// FUNCTION PARAMETERS AND ARGUMENTS
+// function getFood(nameOfFood, quantity) {    
+//     console.log("leaveHouse");
+//     console.log("moveRight");
+//     console.log("moveUp");
+//     console.log("Buy " + quantity + " cups of " + nameOfFood + " at the store");
+//     console.log("moveLeft");
+//     console.log("moveDown");
+//     console.log("moveLeft");
+//     console.log("enterHouse");
+// }
+// getFood("rice", 5);
+
+// // var foodName = prompt("Enter the name of food: ");
+// // var foodQuantity = prompt("Enter the quantity of food: ");
+// // getFood(foodName, foodQuantity);
+
+
+
+
+
+// // CHALLENGE -
+// // Create a fn that tells how many days, weeks and
+// // months we have left until 90 years using this format:
+// // You have x days, y weeks and z months left.
+
+// // Assume we have 365 days, 52 weeks and 12 months in a year
+
+// function timeLeft(age) {
+//     var yearsLeft = 90 - age;
+//     var daysLeft = yearsLeft * 365;
+//     var weeksLeft = yearsLeft * 52;
+//     var monthsLeft = yearsLeft * 12;
+
+//     console.log("You have " + daysLeft + " days, " + weeksLeft + 
+//                 " weeks and " +  monthsLeft + " months left.");
+// }
+
+// var age = prompt("Enter your age : ");
+// timeLeft(age);
+
+
+
+// // CHALLENGE
+// // BMI (Body Mass Index) CALCULATOR to estimate the amount of body fat.
+// // Used in medicine to calculate risk of heart disease
+
+// // BMI = weight / height * height
+// function bmiCalculator(weight, height) {
+//    return "Your Body Mass Index is " + calcBmi(weight, height);
+// }
+
+// function calcBmi(weight, height) {
+//     // var bmi =  Math.floor(weight / (height * height));
+//     var bmi =  Math.round(weight / Math.pow(height, 2));
+//     return bmi;
+// }
+
+
+// var bmi = bmiCalculator(65, 1.8);
+// console.log(bmi);
