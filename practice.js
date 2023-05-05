@@ -181,7 +181,7 @@
 
 
 
-// // CHALLENGE -
+// // CHALLENGE - LIFETIME CHECKER
 // // Create a fn that tells how many days, weeks and
 // // months we have left until 90 years using this format:
 // // You have x days, y weeks and z months left.
@@ -221,3 +221,101 @@
 
 // var bmi = bmiCalculator(65, 1.8);
 // console.log(bmi);
+
+
+
+
+// RANDOM NUMBER GENERATION IN JS
+// // Multiply random generated no by whatever range needed
+// var n = Math.random() * 6;
+// n = Math.floor(n) + 1;
+// console.log(n)
+
+
+
+// // // CHALLENGE - LOVE CALCULATOR
+// var yourName = prompt("Enter your name: ");
+// var crushName = prompt("Enter crush's name: ");
+// var loveScore = Math.random() * 100;
+// loveScore = Math.floor(loveScore) + 1;
+
+// console.log("The love score for " +
+//             yourName + " and " + crushName + " is " +
+//            loveScore + "%");
+
+
+
+// // CHALLENGE - LEAP YEAR
+// // Write a program that works out whether if a given year
+// // is a leap year. A normal year has 365 day, leap years
+// // have 366, with an extra day in February.
+// // Hint:
+// // every year that is evenly divisible by 4
+// // except every year that is evenly divisible by 100
+// // unless the year is also evenly divisible by 400
+
+// function isLeap(year) {
+//     if ((year % 4) == 0) {
+//         if ((year % 100) == 0) {
+//             if ((year % 400) == 0) {
+//                 console.log("Leap year.");
+//             } else {
+//                 console.log("Not Leap year.");
+//             }  
+//         } else {
+//              console.log("Leap year.");
+//         }
+//     } else {
+//         console.log("Not leap year.");
+//     }
+// }
+
+// var year = prompt("Enter year: ");
+// isLeap(year);
+
+
+
+// // ARRAYS
+// var guestList = ["Angela", "Jack", "Jill",
+//                  "George", "Vanessa"];
+// var guestName = prompt("Enter your name: ")
+// if (guestList.includes(guestName)) {
+//     alert("Welcome, " + guestName);
+// }else {
+//     alert("Sorry, can't find you");
+// }
+
+// // CHALLENGE - FIZZBUZZ
+// var output = [];
+// var n = 1;
+
+
+// function fizzBuzz() {
+//     if (n % 3 == 0 && n % 5 == 0) {
+//         output.push("FizzBuzz");
+//     }
+//     else if (n % 3 == 0) {
+//         output.push("Fizz");
+//     }
+//     else if (n % 5 == 0) {
+//         output.push("Buzz");
+//     }
+//     else {
+//         output.push(n);    
+//     }
+//     n++;
+   
+//     console.log(output)
+// }
+
+// let names = ["Angela", "Ben", "Jenny",
+//              "Michael", "Chloe"];
+
+// function whosPaying(names) {
+//     payLunch = Math.floor(Math.random() * names.length)
+//     return names[payLunch] + " is going to buy lunch today!";
+// }
+
+// whosPaying(names);
+
+
