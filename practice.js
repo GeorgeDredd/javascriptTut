@@ -319,3 +319,63 @@
 // whosPaying(names);
 
 
+// JS ARRAYS
+let bikes = ["yamaha", "Bajaj", "Honda", "TVS"];
+console.log(bikes); //[ 'yamaha', 'Bajaj', 'Honda', 'TVS' ]
+
+console.log(bikes.toString()); //yamaha,Bajaj,Honda,TVS
+
+console.log(bikes.toString()[0]); //y
+
+console.log(bikes.join("-")); //yamaha-Bajaj-Honda-TVS
+
+console.log(bikes.pop()); //TVS
+
+console.log(bikes); //changes original array [ 'yamaha',     'Bajaj', 'Honda' ]
+
+
+bikes = ["yamaha", "Bajaj", "Honda", "TVS"]; 
+console.log(bikes.push("Ducatti" , "Royal Enfield")); // returns new length 6
+console.log(bikes); //changes the original array [ 'yamaha', 'Bajaj', 'Honda', 'TVS', 'Ducatti', 'Royal Enfield' ]
+
+console.log(bikes.shift()); //yamaha 
+console.log(bikes); //changes the original array [ 'Bajaj', 'Honda', 'TVS', 'Ducatti', 'Royal Enfield' ]
+
+
+bikes = ["yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield"]; 
+console.log(bikes.unshift("BMW", "Kawasaki")); //returns new length 8
+console.log(bikes); //changes the original array [ 'BMW','Kawasaki', 'yamaha', 'Bajaj', 'Honda' , 'TVS', 'Ducatti','Royal Enfield' ]
+
+
+bikes = ["yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield"]; 
+delete bikes[1];
+console.log(bikes); //does not change the length of array[ 'yamaha', <1 empty item>, 'Honda' , 'TVS', 'Ducatti','Royal Enfield' ]
+
+
+let bikes1 = ["BMW", "Kawasaki"];
+let bikes2 = ["yamaha", "Bajaj", "Honda"]; 
+let bikes3 = ["TVS", "Ducatti" , "Royal Enfield"]; 
+let newBikes = bikes1.concat(bikes2, bikes3);
+console.log(newBikes); //returns new array ["BMW", "Kawasaki","yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield"];
+
+
+newBikes = ["BMW", "Kawasaki","yamaha", "Bajaj"];
+let newBikesCost = [1200, 500, 350, 4100];
+newBikes.sort();
+console.log(newBikes);
+newBikesCost.sort(compareFn)
+console.log(newBikesCost.sort(compareFn))
+  function compareFn(a, b) {
+      return a - b;
+  }
+console.log(newBikesCost);
+
+
+bikes = ["yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield"]; 
+bikes.splice(2, 3) //[ 'yamaha', 'Bajaj', 'Royal Enfield' ]
+console.log(bikes);
+bikes = ["yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield"]; 
+bikes.splice(2, 3, "Ford", "Toyota");
+console.log(bikes); //[ 'yamaha', 'Bajaj', 'Ford', 'Toyota', 'Royal Enfield' ]
+
+
