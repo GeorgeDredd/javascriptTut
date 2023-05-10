@@ -285,28 +285,7 @@
 //     alert("Sorry, can't find you");
 // }
 
-// // CHALLENGE - FIZZBUZZ
-// var output = [];
-// var n = 1;
 
-
-// function fizzBuzz() {
-//     if (n % 3 == 0 && n % 5 == 0) {
-//         output.push("FizzBuzz");
-//     }
-//     else if (n % 3 == 0) {
-//         output.push("Fizz");
-//     }
-//     else if (n % 5 == 0) {
-//         output.push("Buzz");
-//     }
-//     else {
-//         output.push(n);    
-//     }
-//     n++;
-   
-//     console.log(output)
-// }
 
 // let names = ["Angela", "Ben", "Jenny",
 //              "Michael", "Chloe"];
@@ -318,8 +297,8 @@
 
 // whosPaying(names);
 
-
-// JS ARRAYS
+/*
+// JS ARRAY METHODS
 let bikes = ["yamaha", "Bajaj", "Honda", "TVS"];
 console.log(bikes); //[ 'yamaha', 'Bajaj', 'Honda', 'TVS' ]
 
@@ -359,16 +338,15 @@ let newBikes = bikes1.concat(bikes2, bikes3);
 console.log(newBikes); //returns new array ["BMW", "Kawasaki","yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield"];
 
 
-newBikes = ["BMW", "Kawasaki","yamaha", "Bajaj"];
+newBikes = ["BMW", "Kawasaki","yamaha", "Bajaj"].map(e => e.toLowerCase());
 let newBikesCost = [1200, 500, 350, 4100];
 newBikes.sort();
 console.log(newBikes);
 newBikesCost.sort(compareFn)
-console.log(newBikesCost.sort(compareFn))
   function compareFn(a, b) {
       return a - b;
   }
-console.log(newBikesCost);
+console.log(newBikesCost); //[ 350, 500, 1200, 4100 ]
 
 
 bikes = ["yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield"]; 
@@ -377,5 +355,257 @@ console.log(bikes);
 bikes = ["yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield"]; 
 bikes.splice(2, 3, "Ford", "Toyota");
 console.log(bikes); //[ 'yamaha', 'Bajaj', 'Ford', 'Toyota', 'Royal Enfield' ]
+
+
+
+bikes = ["yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield"];
+console.log(bikes.slice(1, 4)); //[ 'Bajaj', 'Honda', 'TVS' ]
+
+
+
+newBikes = ["BMW", "Kawasaki","yamaha", "Bajaj"];
+newBikesCost = [1200, 500, 350, 4100];
+newBikes.reverse()
+console.log(newBikes); //[ 'bajaj', 'yamaha', 'kawasaki', 'bmw' ]
+newBikesCost.reverse()
+console.log(newBikesCost);//[ 4100, 350, 500, 1200 ]
+
+
+bikes = ["yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield"];
+let movieName = "Ghost Rider";
+console.log(Array.isArray(bikes)); //true
+console.log(Array.isArray(movieName)); //false
+
+
+
+bikes = ["yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield", "TVS"];
+console.log(bikes.indexOf("TVS")); //3
+console.log(bikes.indexOf("yamaha", 4)); //-1
+console.log(bikes.lastIndexOf("TVS")); //6
+
+
+
+newBikesCost = [1200, 500, 350, 4100];
+newBikesCost.sort(compareFn)
+let highCostArr = [];
+newBikesCost.forEach((element) => { 
+        if (element > 400) {
+        highCostArr.push(element);
+        return highCostArr;
+        }
+}) 
+console.log(highCostArr); //[ 500, 1200, 4100 ]
+
+
+newBikesCost = [1200, 500, 350, 4100];
+newBikesCost.sort(compareFn);
+const newCost = newBikesCost.find((v) => v > 350);
+const newCostIndex = newBikesCost.findIndex((v) => v > 350);
+console.log(newBikesCost); //[ 350, 500, 1200, 4100 ]
+console.log(newCost); //500
+console.log(newCostIndex); //1
+
+
+
+newBikesCost = [1200, 500, 350, 4100];
+console.log(newBikesCost.includes(350)); //true
+
+
+
+
+bikes = ["yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield"];
+let bike = bikes.entries();
+
+for (let x of bike) {
+  console.log(x + " \n") 
+                        // 0,yamaha
+                        // 1,Bajaj  
+                        // 2,Honda  
+                        // 3,TVS  
+                        // 4,Ducatti  
+                        // 5,Royal Enfield
+}
+
+
+
+bikes = [1500, "yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield", true];
+newBikesCost = [2, 1200, 500, 350, 4100, 50];
+
+let stringTest = (currentValue) => typeof(currentValue) === "string";
+let max200  = (currentValue) => currentValue > 200;
+
+
+  // function stringTest (currentValue) {
+  //     return typeof(currentValue) === "string";
+  // }
+
+  // function  max200 (currentValue) {
+  //     return currentValue > 200;
+  // }
+
+console.log(bikes.every(stringTest)); //false
+console.log(newBikesCost.every(max200)); //false
+
+console.log(bikes.some(stringTest)); //true
+console.log(newBikesCost.some(max200)); //true
+
+
+
+
+bikes = [1500, "yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield", true];
+let lastElem = bikes.length;
+bikes.fill("bike", 0, 1);
+bikes.fill("bike", lastElem - 1 , lastElem);
+console.log(bikes); //['bike','yamaha', 'Bajaj','Honda', 'TVS', 'Ducatti', 'Royal Enfield','bike']
+
+
+
+
+
+
+bikes = [1500, "yamaha", "Bajaj"];
+bikes.copyWithin(2, 0);
+console.log(bikes); //[ 1500, 'yamaha', 1500 ]
+
+
+
+
+
+
+bikes = [1500, "yamaha", "Bajaj"];
+console.log(bikes.valueOf()); //bikes
+
+
+
+
+
+
+newBikesCost = [1200, 500, 350, 4100];
+newBikesCost.forEach(formatPrice);
+
+function formatPrice(item, index, arr) {
+    arr[index] = `$${item}.00`;
+    return arr[index];
+}
+
+console.log(newBikesCost); //[ '$1200.00', '$500.00', '$350.00', '$4100.00' ]
+
+
+
+
+
+let ages = [32, 33, 16, 40];
+let result = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return  age >= 18;
+}
+
+console.log(result) //[ 32, 33, 40 ];
+
+
+
+
+
+
+ages = [32, 33, 1, 4, 5];
+// ages.reduce(myFunc);
+// ages.reduceRight(myFunc);
+
+function myFunc(total, num) {
+  return total - num;
+}
+
+console.log(ages); //[ 32, 33, 1, 4, 5 ]
+
+
+
+
+
+
+
+let myName = "George";
+console.log(Array.from(myName));//[ 'G', 'e', 'o', 'r', 'g', 'e' ]
+
+*/
+
+
+
+// // CHALLENGE - FIZZBUZZ
+// var output = [];
+// var n = 1;
+
+
+// function fizzBuzz() {
+//     while (n <= 100) {
+//       if (n % 3 == 0 && n % 5 == 0) {
+//           output.push("FizzBuzz");
+//       }
+//       else if (n % 3 == 0) {
+//           output.push("Fizz");
+//       }
+//       else if (n % 5 == 0) {
+//           output.push("Buzz");
+//       }
+//       else {
+//           output.push(n);    
+//       }
+//       n++;
+//     }
+//     console.log(output)
+// }
+// fizzBuzz();
+
+
+// // CHALLENGE - 99 BOTTLES OF BEER
+// var count  = 99;
+// function beer() {
+//     while(count >= 0) {
+//         // if (count == 0) {
+//         //   console.log("No more bottles of beer on the wall, no more bottles of beer.");
+//         //   count--;
+//         //   console.log("Go to the store and buy some more, 99 bottles of beer on the wall \n");
+//         // }
+//         // else if(count == 1) {
+//         //   console.log(count + " bottle of beer on the wall, " + count + " bottle of beer.");
+//         //   count--;
+//         //   console.log("Take one down and pass it around, no more bottles of beer on the wall.\n");
+//         // }
+//         // else if(count == 2) {
+//         //   console.log(count + " bottles of beer on the wall, " + count + " bottles of beer.");
+//         //   count--;
+//         //   console.log("Take one down and pass it around, " + count + " bottle of beer on the wall.\n");
+//         // }
+
+//         Trial - 2
+//         let bottleWord = " bottles";
+//         let msgOne = count + bottleWord + " of beer on the wall, " + count + " bottles of beer.";
+//         let msgTwo = "Take one down and pass it around, " + count + bottleWord + " of beer on the wall.\n";
+//         if (count == 0) {
+//           msgOne = "No more bottles of beer on the wall, no more bottles of beer."
+//           msgTwo = "Go to the store and buy some more, 99 bottles of beer on the wall \n"
+//         }
+//         else if(count == 1) {
+//           bottleWord = " bottle"
+//           msgTwo = "Take one down and pass it around, no more bottles of beer on the wall.\n";
+//         }
+//         else if(count == 2) {
+//           bottleWord = " bottle"
+//           msgOne = count + " bottles of beer on the wall, " + count + " bottles of beer.";
+
+//         }
+//         console.log(msgOne);
+//         count--;
+//         console.log(msgTwo);
+      
+//     }
+// }
+
+// beer();
+
+
+
+
+
 
 
