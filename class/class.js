@@ -114,14 +114,16 @@ efefefef
 // let d = 4;
 // let e = 1
 
+// // == Equals
+// // != Not equals
 // let comparison = (b  > a);
 // comparison = (a  > b );
 // comparison = (a  < b );
 // comparison = (b  >= a);
 // comparison = (b  <= a);
-// comparison = (a  == b);
+// comparison = (a == b);
 // comparison = (a  != b);
-// comparison = (a  == e);
+// comparison = (a == e);
 // comparison = (a + b == c);
 // comparison = (a + b != c + d);
 // comparison = (d == c + a);
@@ -129,8 +131,8 @@ efefefef
 // comparison = (c >= b + a);
 
 
-// document.getElementById("paragraph").textContent = comparison;
-// console.log(comparison)
+// document.getElementById("msg").textContent = comparison;
+// // console.log(comparison)
 
 
 
@@ -142,4 +144,72 @@ efefefef
 // 2. Discuss DOM properties 
 // 3. Intro to Functions
 // 4. Comparison Operators (==, <, <=, >, >=, !=)
-// 5. Assignment - background changer, age calculator
+// 5. Conditional
+// 6. Assignment - background changer, age calculator
+
+
+
+
+let body = document.getElementById("body");
+let p = document.getElementById("msg");
+let inputScore = document.getElementsByClassName("inputScore");
+let btn = document.getElementById("btn");
+let head = document.getElementById("head");
+
+
+
+btn.addEventListener("click", addScore);
+
+
+function addScore (e) {
+    // prevent the defaut bhvur wen u submit a form
+    e.preventDefault();
+    let maths = inputScore[0].value;
+    let eng = inputScore[1].value;
+    let phy = inputScore[2].value;
+    let chem = inputScore[3].value;
+    // convert the values from string to number
+    let totalScore = Number(maths) + Number(eng) + Number(phy) + Number(chem) ;
+    // add a text to the paragraph element you selected from the DOM
+    p.textContent = "Your score is " + totalScore;
+
+
+     
+    if (totalScore >= 200)  {      
+        body.style.backgroundColor = "green"; 
+        btn.style.backgroundColor = "green"; 
+        p.textContent += "...Boss!!!"; 
+
+    }
+    // 100 101 102..... 200
+    else if (totalScore >= 100 && totalScore < 200)  {      
+        body.style.backgroundColor = "orange"; 
+        btn.style.backgroundColor = "orange"; 
+        p.textContent += "..You try!!!"; 
+
+    }        
+    else {
+        body.style.backgroundColor = "red"; 
+        btn.style.backgroundColor = "red";
+        p.textContent += "..Dey Play"; 
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+// btn.addEventListener("click", showResult);
+// function showResult(e) {
+//     e.preventDefault()
+//     let totalScore = Number(inputScore[0].value) + Number(inputScore[1].value) +  Number(inputScore[2].value) +  Number(inputScore[3].value);
+//     p.textContent = "Your Jamb Score is " + totalScore + ".... "; 
+
+
+  
+// }
