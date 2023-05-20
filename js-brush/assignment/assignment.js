@@ -6,70 +6,71 @@
 // No #1
 // Write a JavaScript function that takes two numbers as parameters (a and b) and returns true if a is greater than b, and false otherwise.
 
-// function checkGreaterThan(a, b) {
-//     if (a > b) {
-//         return true
-//     }
-//     else {
-//         return false
-//     }
-// }
+// function isGreater(a, b) {
+//     return a > b;
+//   }
+  
+// const num1 = 10;
+// const num2 = 5;
 
-
-// console.log(checkGreaterThan(1, 2));
+// const isNum1Greater = isGreater(num1, num2);
+// console.log("Is num1 greater than num2?", isNum1Greater);
+  
 
 
 // No #2
 // Create a JavaScript program that prompts the user to enter their age and checks if it is greater than or equal to 18 using the comparison operator.
 
-// let age = prompt("Enter your age: ");
+// const age = parseInt(prompt("Enter your age:"));
 
-// if (age >= 18) {
-//     alert("Adult")
-// } else {
-//     alert("Not an adult")
-// }
+// const isAdult = age >= 18;
+// console.log("Is the user an adult?", isAdult);
+
 
 
 // No #3
+// function findSmallestIndex(numbers) {
+// let smallestIndex = 0;
+// for (let i = 1; i < numbers.length; i++) {
+//     if (numbers[i] < numbers[smallestIndex]) {
+//     smallestIndex = i;
+//     }
+// }
+// return smallestIndex;
+// }
+
+// const numbers = [5, 3, 9, 1, 7];
+
+// const smallestIndex = findSmallestIndex(numbers);
+// console.log("Index of the smallest value:", smallestIndex);
+  
 
 
 
 // No #4
 // Write a JavaScript program that checks if a given string is longer than 10 characters using the comparison operator.
 
-// let text = prompt("Enter your message: ");
+// const inputString = "Hello, World!";
 
-// console.log(text.length)
-
-// if (text.length > 10) {
-//     alert("You entered more than 10 characters");
-// }
-// else {
-//     alert("You entered less than 10 characters");
-// }
+// const isLongerThan10 = inputString.length > 10;
+// console.log("Is the string longer than 10 characters?", isLongerThan10);
 
 
 
 // No #5
 // Create a JavaScript function that takes two dates as parameters and checks if the first date is later than the second date using the comparison operator.
 
-// let dateOne = new Date("May 25 2023");
-// let dateTwo = new Date("May 21 2023");
-
-// function laterDate(d1, d2) {
-//     if(d1 > d2) {
-//         alert("First date is later than second")
-//     }
-//     else {
-//         alert("Second date is later than first")
-//     }
-// }
-
-// laterDate(dateOne, dateTwo);
-
-
-
+function isLaterDate(date1, date2) {
+    return date1 > date2;
+  }
+  
+//   const date1 = new Date("2022-01-01");
+//   const date2 = new Date("2023-01-01");
+  const date1 = new Date("25 May 2023");
+  const date2 = new Date("10 May 2023");
+  
+  const isFirstDateLater = isLaterDate(date1, date2);
+  console.log("Is the first date later than the second date?", isFirstDateLater);
 
 
 
