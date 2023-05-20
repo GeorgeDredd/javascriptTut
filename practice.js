@@ -604,6 +604,14 @@ console.log(Array.from(myName));//[ 'G', 'e', 'o', 'r', 'g', 'e' ]
 // beer();
 
 
+function fibonnacciGenerator (n) {
+      
+}
+
+// output = fibonnacciGenerator()
+// console.log(output)
+
+
 
 
 
