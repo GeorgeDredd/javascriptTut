@@ -473,7 +473,7 @@ console.log(bikes); //[ 1500, 'yamaha', 1500 ]
 
 
 bikes = [1500, "yamaha", "Bajaj"];
-console.log(bikes.valueOf()); //bikes
+console.log(bikes.valueOf()); //[1500, "yamaha", "Bajaj"]
 
 
 
@@ -604,9 +604,12 @@ console.log(Array.from(myName));//[ 'G', 'e', 'o', 'r', 'g', 'e' ]
 // beer();
 
 
-function fibonnacciGenerator (n) {
+
+
+// // Challenge - FibonnacciGenerator
+// function fibonnacciGenerator (n) {
       
-}
+// }
 
 // output = fibonnacciGenerator()
 // console.log(output)

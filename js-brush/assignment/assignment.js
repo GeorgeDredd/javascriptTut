@@ -60,17 +60,17 @@
 // No #5
 // Create a JavaScript function that takes two dates as parameters and checks if the first date is later than the second date using the comparison operator.
 
-function isLaterDate(date1, date2) {
-    return date1 > date2;
-  }
+// function isLaterDate(date1, date2) {
+//     return date1 > date2;
+//   }
   
-//   const date1 = new Date("2022-01-01");
-//   const date2 = new Date("2023-01-01");
-  const date1 = new Date("25 May 2023");
-  const date2 = new Date("10 May 2023");
+// //   const date1 = new Date("2022-01-01");
+// //   const date2 = new Date("2023-01-01");
+//   const date1 = new Date("25 May 2023");
+//   const date2 = new Date("10 May 2023");
   
-  const isFirstDateLater = isLaterDate(date1, date2);
-  console.log("Is the first date later than the second date?", isFirstDateLater);
+//   const isFirstDateLater = isLaterDate(date1, date2);
+//   console.log("Is the first date later than the second date?", isFirstDateLater);
 
 
 
@@ -151,7 +151,7 @@ function isLaterDate(date1, date2) {
 // Write a JavaScript program that checks if a given string is a palindrome using the equality operator.
 
 // function isPalindrome(str) {
-    // reverse method   -  reverses elements in an Array, first convert to array using split and finally join
+    // // reverse method   -  reverses elements in an Array, first convert to array using split and finally join
 //     const reversedStr = str.split("").reverse().join("");
 //     return str === reversedStr;
 // }
