@@ -298,6 +298,12 @@
 // whosPaying(names);
 
 /*
+
+
+
+
+
+
 // JS ARRAY METHODS
 let bikes = ["yamaha", "Bajaj", "Honda", "TVS"];
 console.log(bikes); //[ 'yamaha', 'Bajaj', 'Honda', 'TVS' ]
@@ -307,6 +313,8 @@ console.log(bikes.toString()); //yamaha,Bajaj,Honda,TVS
 console.log(bikes.toString()[0]); //y
 
 console.log(bikes.join("-")); //yamaha-Bajaj-Honda-TVS
+
+
 
 console.log(bikes.pop()); //TVS
 
@@ -614,8 +622,35 @@ console.log(Array.from(myName));//[ 'G', 'e', 'o', 'r', 'g', 'e' ]
 // output = fibonnacciGenerator()
 // console.log(output)
 
-bikes = ["yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield", "TVS"];
-console.log(bikes.indexOf("TVSS")); //3
+// bikes = ["yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield", "TVS"];
+// console.log(bikes.indexOf("TVSS")); //3
+
+
+
+/*
+// Template Literal
+let myName = "George Odo Chiedozie";
+let profession = "Software Dev"
+
+// let composition = "My name is " + myName + ". I am a " + profession + "\n" + "More about my self i did bla bla bla bla bla bla bla bla bla bla bla bla";
+
+let composition = `My name is ${myName}. I am a ${profession}.
+More about my self i did bla bla bla bla bla bla bla bla bla bla bla bla
+djhgf
+dfiugdgyug
+
+djhffgyd
+djbhdbhff
+fhdhuhiu
+${myName}
+${profession}
+`
+
+console.log(composition); //My name is George Odo ChiedozieI am a Software Dev
+
+*/
+
+
 
 
 
