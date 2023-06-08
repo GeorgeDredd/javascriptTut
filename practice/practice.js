@@ -304,8 +304,8 @@
 
 
 
-// JS ARRAY METHODS
-let bikes = ["yamaha", "Bajaj", "Honda", "TVS"];
+//JS ARRAY METHODS
+// let bikes = ["yamaha", "Bajaj", "Honda", "TVS"];
 console.log(bikes); //[ 'yamaha', 'Bajaj', 'Honda', 'TVS' ]
 
 console.log(bikes.toString()); //yamaha,Bajaj,Honda,TVS
@@ -346,10 +346,16 @@ let newBikes = bikes1.concat(bikes2, bikes3);
 console.log(newBikes); //returns new array ["BMW", "Kawasaki","yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield"];
 
 
-newBikes = ["BMW", "Kawasaki","yamaha", "Bajaj"].map(e => e.toLowerCase());
+newBikes = ["BMW", "Kawasaki","yamaha", "Bajaj"]
+newBikesArr = newBikes.map(e => e.toLowerCase());
 let newBikesCost = [1200, 500, 350, 4100];
 newBikes.sort();
 console.log(newBikes);
+
+// newBikesCost.sort((a, b) => a - b) //smallest to largest
+// newBikesCost.sort((a, b) => b - a) //largest to smallest
+
+
 newBikesCost.sort(compareFn)
   function compareFn(a, b) {
       return a - b;
@@ -649,12 +655,3 @@ ${profession}
 console.log(composition); //My name is George Odo ChiedozieI am a Software Dev
 
 */
-
-
-
-
-
-
-
-
-

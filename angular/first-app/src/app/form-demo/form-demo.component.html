@@ -22,10 +22,10 @@
                         <label for="firstname">First name: {{fname}}</label>
                         <input #firstname="ngModel" minlength="3" required type="text" name="fname" id="firstname" [(ngModel)]="fname">
                         <div *ngIf = "firstname.touched && firstname.invalid" class="alert alert-danger" >
-                            <!-- First name is required -->
-                            <div *ngIf = "firstname.errors['required']">
+                            First name is required
+                            <!-- <div *ngIf = "firstname.errors['required']">
                                 First name is required
-                            </div>
+                            </div> -->
                             <!-- <div *ngIf = "firstname.errors?.minlength">
                                 First name is invalid
                             </div> -->
