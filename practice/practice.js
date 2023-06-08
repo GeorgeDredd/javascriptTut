@@ -614,6 +614,9 @@ console.log(Array.from(myName));//[ 'G', 'e', 'o', 'r', 'g', 'e' ]
 // output = fibonnacciGenerator()
 // console.log(output)
 
+bikes = ["yamaha", "Bajaj", "Honda", "TVS", "Ducatti" , "Royal Enfield", "TVS"];
+console.log(bikes.indexOf("TVSS")); //3
+
 
 
 
