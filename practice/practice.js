@@ -476,12 +476,9 @@ console.log(bikes); //['bike','yamaha', 'Bajaj','Honda', 'TVS', 'Ducatti', 'Roya
 
 
 
-
 bikes = [1500, "yamaha", "Bajaj"];
 bikes.copyWithin(2, 0);
 console.log(bikes); //[ 1500, 'yamaha', 1500 ]
-
-
 
 
 
@@ -516,7 +513,6 @@ function checkAdult(age) {
 }
 
 console.log(result) //[ 32, 33, 40 ];
-
 
 
 
