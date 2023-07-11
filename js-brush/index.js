@@ -118,14 +118,79 @@
 
 
 
-import interns, {department, bio} from "./impExp.js";
+// import interns, {department, bio} from "./impExp.js";
 
-const workingWithImpExp = () => {
-    interns();
-    department();
-    bio(44);
-    console.log(bio(2).name);
+// const workingWithImpExp = () => {
+//     interns();
+//     department();
+//     bio(44);
+//     console.log(bio(2).name);
+// }
+
+// workingWithImpExp();
+
+
+
+
+
+// // EXAMPLE #1
+// function fetchData(callback) {
+//     setTimeout(() => {
+//         const data = "Callback data";
+//         callback(data);
+//     }, 3000)
+// }
+
+// function myData(data) {
+//     console.log(`Processed Data: ${data}`);
+// }
+
+// fetchData(myData);
+
+
+
+// // EXAMPLE #2
+// function fetchData() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             // const data = "Callback Henry accepted";
+//             // resolve(data);
+
+//             const data = "Callback Henry rejected";
+//             reject(data);
+//         }, 3000)
+//     })
+// }
+
+// function myData(data) {
+//     console.log(`Processed Data: ${data}`);
+// }
+
+// fetchData().then(myData).catch(error => {
+//     console.error("Error", error);
+// });
+
+
+// // EXAMPLE #3
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const data = "Callback Henry accepted";
+            resolve(data);
+
+            // const data = "Callback Henry rejected";
+            // reject(data);
+        }, 3000)
+    })
 }
 
-workingWithImpExp();
+async function myData() {
+    try{
+        const data = await fetchData();
+        console.log(`Processed: ${data}`);
+    }catch(error){
+        console.log(`Error: ${error}`)
+    }
+}
 
+myData();

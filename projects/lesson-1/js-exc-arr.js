@@ -1,3 +1,4 @@
+// // ASSIGNMENT 1
 // // 1) Write a JavaScript function to check whether an input is an array or not
 
 // function is_array(data) {
@@ -1231,11 +1232,7 @@
 
 
 
-
-
-
-
-
+// // ASSIGNMENT 2
 // // JS EXERCISES ON OBJECTS
 
 // // 1. Write a JavaScript program to list the properties of a JavaScript object. Sample object:
@@ -1505,35 +1502,34 @@
 //   console.log(parsedURL);
   
 
-// // 12. Write a JavaScript function to retrieve all the names of an object's own and inherited properties.
-function getAllProperties(obj) {
-    var properties = [];
+// // 12. Write a JavaScript function to retrieve all the names of an object's own and inherited properties.function getAllProperties(obj) {
+  //   var properties = [];
   
-    // Get own properties
-    properties = properties.concat(Object.getOwnPropertyNames(obj));
+  //   // Get own properties
+  //   properties = properties.concat(Object.getOwnPropertyNames(obj));
   
-    // Get inherited properties
-    var prototype = Object.getPrototypeOf(obj);
-    while (prototype !== null) {
-      properties = properties.concat(Object.getOwnPropertyNames(prototype));
-      prototype = Object.getPrototypeOf(prototype);
-    }
+  //   // Get inherited properties
+  //   var prototype = Object.getPrototypeOf(obj);
+  //   while (prototype !== null) {
+  //     properties = properties.concat(Object.getOwnPropertyNames(prototype));
+  //     prototype = Object.getPrototypeOf(prototype);
+  //   }
   
-    return properties;
-  }
+  //   return properties;
+  // }
   
-  // Example usage:
-  var myObject = {
-    a: 1,
-    b: 2
-  };
+  // // Example usage:
+  // var myObject = {
+  //   a: 1,
+  //   b: 2
+  // };
   
-  // Add a property to the object's prototype
-  Object.prototype.c = 3;
+  // // Add a property to the object's prototype
+  // Object.prototype.c = 3;
   
-  // Retrieve all properties of the object
-  var allProperties = getAllProperties(myObject);
-  console.log(allProperties);
+  // // Retrieve all properties of the object
+  // var allProperties = getAllProperties(myObject);
+  // console.log(allProperties);
   
 
 // // 13. Write a JavaScript function to retrieve all the values of an object's properties.
@@ -1646,3 +1642,119 @@ function getAllProperties(obj) {
 //   console.log(isNotElement); // Output: false
   
 
+
+// // ASSIGNMENT 3
+// // 18 JavaScript Snippets for Common Tasks
+// // JavaScript is a powerful language that allows you to accomplish a wide range of tasks. In this article, we'll explore 18 JavaScript code snippets for common tasks, from copying to clipboard and checking for dark mode to generating random integers and rounding numbers to a specific number of decimals. Let's dive in!
+
+// // 1. Copy to Clipboard
+// function copyToClipboard(text) {
+//   navigator.clipboard.writeText(text)
+//     .then(() => {
+//       console.log('Text copied to clipboard');
+//     })
+//     .catch((error) => {
+//       console.error('Unable to copy text: ', error);
+//     });
+// }
+
+// // 2. Scroll to Top
+// function scrollToTop() {
+//   window.scrollTo({ top: 0, behavior: 'smooth' });
+// }
+
+// // 3. Check for Dark Mode
+// function isDarkModeEnabled() {
+//   return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+// }
+
+// // 4. Swap Between Two Elements
+// function swapElements(element1, element2) {
+//   const sibling = element1.nextSibling;
+//   element2.parentNode.insertBefore(element1, element2);
+//   sibling ? element2.parentNode.insertBefore(element2, sibling) : element2.parentNode.appendChild(element2);
+// }
+
+// // 5. Capitalize a String
+// function capitalizeString(string) {
+//   return string.charAt(0).toUpperCase() + string.slice(1);
+// }
+
+// // 6. Reverse a String
+// function reverseString(string) {
+//   return string.split('').reverse().join('');
+// }
+
+// // 7. Remove Duplicates from an Array
+// function removeDuplicates(array) {
+//   return [...new Set(array)];
+// }
+
+// // 8. Remove Falsy Values from an Array
+// function removeFalsyValues(array) {
+//   return array.filter(Boolean);
+// }
+
+// // 9. Merge Multiple Arrays
+// function mergeArrays(...arrays) {
+//   return [].concat(...arrays);
+// }
+
+// // 10. Check if a Variable is an Array
+// function isArray(variable) {
+//   return Array.isArray(variable);
+// }
+
+// // 11. Clone an Array
+// function cloneArray(array) {
+//   return [...array];
+// }
+
+// // 12. Shuffle an Array
+// function shuffleArray(array) {
+//   const shuffledArray = [...array];
+//   for (let i = shuffledArray.length - 1; i > 0; i--) {
+//     const j = Math.floor(Math.random() * (i + 1));
+//     [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+//   }
+//   return shuffledArray;
+// }
+
+// // 13. Convert RGB to Hex
+// function rgbToHex(red, green, blue) {
+//   const componentToHex = (component) => {
+//     const hex = component.toString(16);
+//     return hex.length === 1 ? '0' + hex : hex;
+//   };
+//   return `#${componentToHex(red)}${componentToHex(green)}${componentToHex(blue)}`;
+// }
+
+// // 14. Generate Random Hex Color
+// function generateRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+// }
+
+// // 15. Generate Random Integer within a Range
+// function generateRandomInteger(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+
+// // 16. Find the Average of Numbers
+// function findAverage(numbers) {
+//   const sum = numbers.reduce((acc, num) => acc + num, 0);
+//   return sum / numbers.length;
+// }
+
+// // 17. Convert a Number to Another Base
+// function convertToBase(number, base) {
+//   return number.toString(base);
+// }
+
+// // 18. Round a Number to a Specific Number of Decimals
+// function roundNumber(number, decimals) {
+//   return Number(number.toFixed(decimals));
+// }
+
+// // These JavaScript snippets provide simple solutions to common tasks. You can use them to enhance your web applications and make your development process more efficient. Feel free to experiment and adapt these snippets to suit your specific needs.
+
+// // Happy coding! 

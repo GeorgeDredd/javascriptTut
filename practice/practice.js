@@ -108,25 +108,26 @@
 
 
 
-// // FUNCTIONS
-// // A function that tells my robot to buy food
-// function getFood() {
-//     console.log("leaveHouse");
-//     console.log("moveRight");
-//     console.log("moveUp");
-//     console.log("moveUp");
-//     console.log("moveUp");
-//     console.log("moveRight");
-//     console.log("buyFood");
-//     console.log("moveLeft");
-//     console.log("moveDown");
-//     console.log("moveDown");
-//     console.log("moveDown");
-//     console.log("moveLeft");
-//     console.log("enterHouse");
-// }
+// FUNCTIONS
+// A function that tells my robot to buy food
 
-// getFood();
+
+// declare function
+// write function
+// call function
+
+
+
+
+
+// let foodName = prompt("Enter food to buy: ");
+// let foodName = prompt("Enter food to buy: ");
+// getFood(foodName);
+
+
+// let username = "George"
+
+
 
 
 // // ANOTHER EXAMPLE - DRY PRINCIPLE
@@ -161,21 +162,22 @@
 
 
 // FUNCTION PARAMETERS AND ARGUMENTS
-// function getFood(nameOfFood, quantity) {    
-//     console.log("leaveHouse");
-//     console.log("moveRight");
-//     console.log("moveUp");
-//     console.log("Buy " + quantity + " cups of " + nameOfFood + " at the store");
-//     console.log("moveLeft");
-//     console.log("moveDown");
-//     console.log("moveLeft");
-//     console.log("enterHouse");
-// }
+function getFood(nameOfFood, quantity) {    
+    console.log("leaveHouse");
+    console.log("moveRight");
+    console.log("moveUp");
+    console.log("Buy " + quantity + " cups of " + nameOfFood + " at the store");
+    console.log("moveLeft");
+    console.log("moveDown");
+    console.log("moveLeft");
+    console.log("enterHouse");
+}
 // getFood("rice", 5);
 
-// // var foodName = prompt("Enter the name of food: ");
-// // var foodQuantity = prompt("Enter the quantity of food: ");
-// // getFood(foodName, foodQuantity);
+let foodName = prompt("Enter the name of food: ");
+let foodQuantity = prompt("Enter the quantity of food: ");
+
+getFood(foodName, foodQuantity);
 
 
 
@@ -221,6 +223,12 @@
 
 // var bmi = bmiCalculator(65, 1.8);
 // console.log(bmi);
+
+
+// // 2.435454
+// 2
+
+
 
 
 
@@ -651,3 +659,22 @@ ${profession}
 console.log(composition); //My name is George Odo ChiedozieI am a Software Dev
 
 */
+
+
+// function getFood(foodName) {
+//   console.log("leaveHouse");
+//   console.log("moveRight");
+//   console.log("moveUp");
+//   console.log("moveUp");
+//   console.log("moveUp " + foodName);
+//   console.log("moveRight");
+//   console.log("Buy " + foodName);
+//   console.log("buyFood");
+//   console.log("moveLeft");
+//   console.log("moveDown");
+//   console.log("moveDown");
+//   console.log("moveDown");
+//   console.log("moveLeft");
+//   console.log("enterHouse");
+
+// }

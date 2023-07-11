@@ -3,77 +3,80 @@ let newArrayText = document.querySelector("#newArrayText");
 let btn = document.querySelector("#btn");
 
 
-let bikes = ["yamaha", "Bajaj", "Honda", "TVS"];
+let bikes = ["yamaha", "Bajaj", "Honda", "TVS",];
 let bikesTwo = ["Ford", "Toyata", "Benz"];
 // let bikes = ["yamaha", "Bajaj", "Honda", "TVS", "Ford", "Toyata", "Benz"];
 arrayText.innerHTML = bikes;
 
 
 function change() {
+  let newBikes = bikes.map(changeCasing);
+
+  function changeCasing(e) {
+      return e.toLowerCase(); 
+  }
+
+  let bikeName = prompt("Enter bike name: ").toLowerCase();
+
+  // newBikes = ["yamaha", "bajaj", "honda", "tvs"]
+  if (newBikes.includes(bikeName)) {
+      alert(`Yeah we have ${bikeName}`);
+  }else {
+      alert(`Sorry, we currently don't have ${bikeName}`);
+  }
+
 // // ACCESS INDEX
-  // let newArr = `
-  //   We are a car dealer shop, we sell different kind of cars but we only have ${bikes.length} in stock which are ${bikes[0]}, ${bikes[1]}, ${bikes[2]}, ${bikes[3]} .
-  // `
+// let newArr = `
+//   We are a car dealer shop, we sell different kind of cars but we only have ${bikes.length} in stock which are ${bikes[0]}, ${bikes[1]}, ${bikes[2]}, ${bikes[3]} .
+// `
 
 
-  // // TO STRING
-  // let newArr = `We are a car dealer shop, we sell different kind of cars like ${bikes.toString().}`
+// // TO STRING
+// let newArr = `We are a car dealer shop, we sell different kind of cars like ${bikes.toString().}`
 
 
 // // JOIN
-  // let newArr = `We are a car dealer shop, we sell different kind of cars like ${bikes.join("hbcuehb")}`
+// let newArr = `We are a car dealer shop, we sell different kind of cars like ${bikes.join("hbcuehb")}`
 
 
-  // // POP
-  // bikes.pop();
+// // POP
+// bikes.pop();
+
+
+// // PUSH
+// bikes.push("Ford")
+// bikes.push("Toyota")
+// bikes.push("Benz")
+
+// // SHIFT
+// bikes.shift();
+// bikes.shift();
+
+// // UNSHIFT
+// bikes.unshift("FORD");
+
+//  // DELETE
+// delete bikes[1]
+
+// // REPLACE ARRAY ELEMENTS
+// bikes[0] = "Highlander";
+// bikes[1] = "Camry";
+// bikes[2] = "Toyata";
+// bikes[3] = "Benz";
+
+
+  // // CONCAT
+// let newBikes = bikes.concat(bikesTwo);
   
+// newArrayText.innerHTML = ` 
+//         <p style="color:darkgreen; margin-top: 150px">We are a car dealer shop</p> 
+//         <p>We sell different kind of cars but we only have ${newBikes.length} in stock which are ${newBikes.sort().join(", ").toString().toUpperCase()} </p>
+//       `;
 
-  // // PUSH
-  // bikes.push("Ford")
-  // bikes.push("Toyota")
-  // bikes.push("Benz")
-
-  // // SHIFT
-  // bikes.shift();
-  // bikes.shift();
-
-  // // UNSHIFT
-  // bikes.unshift("FORD");
-
-  //  // DELETE
-  // delete bikes[1]
-
-  // // REPLACE ARRAY ELEMENTS
-  // bikes[0] = "Highlander";
-  // bikes[1] = "Camry";
-  // bikes[2] = "Toyata";
-  // bikes[3] = "Benz";
-
-
-let newBikes = bikes.concat(bikesTwo);
-  
-newArrayText.innerHTML = ` 
-        <p style="color:darkgreen; margin-top: 150px">We are a car dealer shop</p> 
-        <p>We sell different kind of cars but we only have ${newBikes.length} in stock which are ${newBikes.join(", ")} </p>
-      `;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
+
 //JS ARRAY METHODS
 // let bikes = ["yamaha", "Bajaj", "Honda", "TVS"];
 console.log(bikes); //[ 'yamaha', 'Bajaj', 'Honda', 'TVS' ]
