@@ -161,23 +161,23 @@
 
 
 
-// FUNCTION PARAMETERS AND ARGUMENTS
-function getFood(nameOfFood, quantity) {    
-    console.log("leaveHouse");
-    console.log("moveRight");
-    console.log("moveUp");
-    console.log("Buy " + quantity + " cups of " + nameOfFood + " at the store");
-    console.log("moveLeft");
-    console.log("moveDown");
-    console.log("moveLeft");
-    console.log("enterHouse");
-}
-// getFood("rice", 5);
+// // FUNCTION PARAMETERS AND ARGUMENTS
+// function getFood(nameOfFood, quantity) {    
+//     console.log("leaveHouse");
+//     console.log("moveRight");
+//     console.log("moveUp");
+//     console.log("Buy " + quantity + " cups of " + nameOfFood + " at the store");
+//     console.log("moveLeft");
+//     console.log("moveDown");
+//     console.log("moveLeft");
+//     console.log("enterHouse");
+// }
+// // getFood("rice", 5);
 
-let foodName = prompt("Enter the name of food: ");
-let foodQuantity = prompt("Enter the quantity of food: ");
+// let foodName = prompt("Enter the name of food: ");
+// let foodQuantity = prompt("Enter the quantity of food: ");
 
-getFood(foodName, foodQuantity);
+// getFood(foodName, foodQuantity);
 
 
 
@@ -678,3 +678,10 @@ console.log(composition); //My name is George Odo ChiedozieI am a Software Dev
 //   console.log("enterHouse");
 
 // }
+
+
+
+// Fn takes as input 
+let number = "123-81-34";
+// number = number.replace(/- /g, "");
+number = Array.from(number);
